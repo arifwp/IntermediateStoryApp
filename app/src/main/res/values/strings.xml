@@ -1,0 +1,25 @@
+<resources>
+    <string name="title_home">Story App</string>
+    <string name="btntocamera">take from Camera</string>
+    <string name="btntoupload">Upload</string>
+    <string name="btntofile">Open File</string>
+    <string name="btnToSignIn">Already have an account</string>
+    <string name="btnToSignUp">Don\'t have an acount</string>
+    <string name="your" translatable="false">Your</string>
+    <string name="story" translatable="false">Story</string>
+    <string name="share" translatable="false">Share</string>
+    <string name="tvlogin">Login</string>
+    <string name="tvemail" translatable="false">Email :</string>
+    <string name="hintemail" translatable="false">Email</string>
+    <string name="tvpassword">Password :</string>
+    <string name="hintpassword">Password</string>
+    <string name="tvregister">Register</string>
+    <string name="tvname">Name :</string>
+    <string name="hintname">Name</string>
+    <string name="uploadStories">Upload Stories</string>
+    <string name="app_name" translatable="false">Your Story</string>
+    <string name="title_detail">Detail Story</string>
+    <string name="password_error">Password less than 6 character</string>
+    <string name="password_kosong">Password empty</string>
+    <string name="title_activity_maps" translatable="false">MapsActivity</string>
+</resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/id_changelanguage"
+        android:icon="@drawable/ic_baseline_language_24"
+        android:title="change language"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/id_maps"
+        android:icon="@drawable/ic_map"
+        android:title="maps"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/id_exit"
+        android:icon="@drawable/ic_exit"
+        android:title="exit"
+        app:showAsAction="ifRoom"/>
+
+</menu>
