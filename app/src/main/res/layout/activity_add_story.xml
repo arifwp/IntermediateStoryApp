@@ -4,62 +4,85 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.addStory.AddStoryActivity">
+    tools:context=".view.AddStoryActivity">
 
     <ImageView
-        android:id="@+id/imagePreview"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:layout_marginTop="24dp"
+        android:id="@+id/image_icon"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:src="@drawable/ic_launcher_background" />
+        tools:src="@drawable/ic_account_circle" />
+
+    <TextView
+        android:id="@+id/text_select_action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/select_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_icon" />
 
     <Button
-        android:id="@+id/takepicture"
-        android:layout_width="wrap_content"
+        android:id="@+id/btn_camera"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="@string/btntocamera"
-        app:layout_constraintEnd_toEndOf="@+id/imagePreview"
-        app:layout_constraintStart_toStartOf="@+id/imagePreview"
-        app:layout_constraintTop_toBottomOf="@+id/imagePreview" />
-
+        android:layout_marginHorizontal="30dp"
+        android:backgroundTint="@color/black"
+        android:text="@string/camera"
+        app:layout_constraintEnd_toEndOf="@+id/image_icon"
+        app:layout_constraintStart_toStartOf="@+id/image_icon"
+        app:layout_constraintTop_toBottomOf="@+id/text_select_action" />
 
     <Button
-        android:id="@+id/upload"
+        android:id="@+id/btn_gallery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="@color/black"
+        android:text="@string/gallery"
+        app:layout_constraintEnd_toEndOf="@+id/btn_camera"
+        app:layout_constraintStart_toStartOf="@+id/btn_camera"
+        app:layout_constraintTop_toBottomOf="@+id/btn_camera" />
+
+    <TextView
+        android:id="@+id/text_write_description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="40dp"
-        android:text="@string/btntoupload"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine" />
+        android:layout_marginTop="32dp"
+        android:labelFor="@id/desc_story"
+        android:text="@string/text_desc"
+        app:layout_constraintStart_toStartOf="@+id/btn_gallery"
+        app:layout_constraintTop_toBottomOf="@+id/btn_gallery" />
+
 
     <EditText
-        android:id="@+id/editTextTextMultiLine"
-        android:layout_width="300dp"
+        android:id="@+id/desc_story"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine"
-        app:layout_constraintEnd_toEndOf="@+id/buttontofile"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="@+id/buttontofile"
-        app:layout_constraintTop_toBottomOf="@+id/buttontofile" />
+        android:layout_marginHorizontal="30dp"
+        app:layout_constraintEnd_toEndOf="@+id/btn_gallery"
+        app:layout_constraintStart_toStartOf="@+id/btn_gallery"
+        app:layout_constraintTop_toBottomOf="@+id/text_write_description" />
 
     <Button
-        android:id="@+id/buttontofile"
-        android:layout_width="wrap_content"
+        android:id="@+id/btn_upload"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:text="@string/btntofile"
-        tools:text="file"
-        app:layout_constraintEnd_toEndOf="@+id/takepicture"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="@+id/takepicture"
-        app:layout_constraintTop_toBottomOf="@+id/takepicture" />
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="@color/black"
+        android:text="@string/btntoupload"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/desc_story" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

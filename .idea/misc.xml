@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/User/AndroidStudioProjects/IntermediateStoryApp/app/src/main/res/drawable-v24/ic_account_circle.xml" value="0.2985" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/IntermediateStoryApp/app/src/main/res/drawable/ic_addLogo.xml" value="0.2985" />
         <entry key="..\:/Users/User/AndroidStudioProjects/IntermediateStoryApp/app/src/main/res/layout/activity_add_story.xml" value="0.24954710144927536" />
         <entry key="..\:/Users/User/AndroidStudioProjects/IntermediateStoryApp/app/src/main/res/layout/activity_detail.xml" value="0.24954710144927536" />
         <entry key="..\:/Users/User/AndroidStudioProjects/IntermediateStoryApp/app/src/main/res/layout/activity_first.xml" value="0.358695652173913" />

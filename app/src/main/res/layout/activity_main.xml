@@ -4,78 +4,85 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.login.LoginActivity"
-    android:background="@drawable/buble">
+    tools:context=".view.LoginActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="monospace"
-        android:text="@string/tvlogin"
-        android:textAlignment="viewStart"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textSize="40sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ImageView
+        android:id="@+id/img_ilustration_login"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.25" />
+        android:src="@drawable/ic_account_circle" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/loginTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="sans-serif-black"
+        android:textColor="@color/black"
+        android:text="@string/login_title"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_ilustration_login" />
+
+    <TextView
+        android:id="@+id/emailTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/tvemail"
+        android:text="@string/emailText"
         android:layout_marginStart="30dp"
         android:layout_marginTop="20dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textSize="16sp"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/loginTitle" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textField"
+        android:id="@+id/layout_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2">
+        app:layout_constraintTop_toBottomOf="@+id/emailTitle">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/ed_email_login"
+            android:id="@+id/login_email"
             android:imeOptions="actionDone"
             android:maxLines="1"
-            android:hint="@string/hintemail"
+            android:hint="@string/emailText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>
+
+
     <TextView
-        android:id="@+id/tv3"
+        android:id="@+id/passText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/tvpassword"
+        android:text="@string/passwordText"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="10dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textField" />
+        app:layout_constraintTop_toBottomOf="@+id/layout_email" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tf2"
+        android:id="@+id/layoutPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv3">
+        app:layout_constraintTop_toBottomOf="@+id/passText">
 
-        <com.awp.intermediatestoryapp.view.customview.EditTextPassword
-            android:id="@+id/ed_pass_login"
+        <com.awp.intermediatestoryapp.view.EditTextPassword
+            android:id="@+id/login_password"
             android:inputType="textPassword"
             android:layout_width="match_parent"
             android:layout_height="50dp"
@@ -85,14 +92,17 @@
 
     <Button
         android:id="@+id/btn_login"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="30dp"
-        android:text="@string/tvlogin"
+        android:backgroundTint="@color/black"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:height="64dp"
+        android:text="@string/login_title"
         android:textSize="16dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tf2" />
+        app:layout_constraintTop_toBottomOf="@+id/layoutPassword" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

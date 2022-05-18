@@ -1,10 +1,10 @@
 package com.awp.intermediatestoryapp.api
 
-import com.awp.intermediatestoryapp.model.AddStoryResponse
-import com.awp.intermediatestoryapp.model.Login.LoginResponse
-import com.awp.intermediatestoryapp.model.Register.RegisterResponse
-import com.awp.intermediatestoryapp.model.stories.StoriesResponse
-import com.awp.intermediatestoryapp.model.stories.StoriesResponseWithLocation
+import com.awp.intermediatestoryapp.response.AddStoryResponse
+import com.awp.intermediatestoryapp.response.LoginResponse
+import com.awp.intermediatestoryapp.response.RegisterResponse
+import com.awp.intermediatestoryapp.response.StoriesLocationResponse
+import com.awp.intermediatestoryapp.response.StoriesResponse
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import retrofit2.Call
@@ -15,7 +15,7 @@ import retrofit2.http.*
 interface ApiService {
     @FormUrlEncoded
     @POST("register")
-    fun registerAccount(
+    fun register(
         @Field("name") name: String,
         @Field("email") email: String,
         @Field("password") password: String
@@ -23,7 +23,7 @@ interface ApiService {
 
     @FormUrlEncoded
     @POST("login")
-    fun loginAccount(
+    fun login(
         @Field("email") email: String,
         @Field("password") password: String
     ): Call<LoginResponse>
@@ -38,15 +38,15 @@ interface ApiService {
 
     @Multipart
     @POST("stories")
-    fun postStories(
+    fun addStories(
         @Header("Authorization") token: String,
         @Part file: MultipartBody.Part,
         @Part("description") description: RequestBody
     ): Call<AddStoryResponse>
 
     @GET("stories")
-    fun getAllStorieswithLocation(
+    fun getStoriesLocation(
         @Header("Authorization") token: String,
         @Query("location") loc : Int = 1
-    ): Call<StoriesResponseWithLocation>
+    ): Call<StoriesLocationResponse>
 }

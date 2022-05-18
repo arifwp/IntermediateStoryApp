@@ -5,15 +5,21 @@ import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.stringPreferencesKey
-import com.awp.intermediatestoryapp.model.Login.UserSessionModel
+import com.awp.intermediatestoryapp.model.UserModel
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 
 class SessionPreference private constructor(private val dataStore: DataStore<Preferences>) {
 
-    fun getUser(): Flow<UserSessionModel> {
+    suspend fun saveDataLogin() {
+        dataStore.edit { preferences ->
+            preferences[STATE_KEY] = true
+        }
+    }
+
+    fun getDataUser(): Flow<UserModel> {
         return dataStore.data.map { preferences ->
-            UserSessionModel(
+            UserModel(
                 preferences[NAME_KEY] ?:"",
                 preferences[TOKEN_KEY] ?:"",
                 preferences[STATE_KEY] ?: false
@@ -21,23 +27,17 @@ class SessionPreference private constructor(private val dataStore: DataStore<Pre
         }
     }
 
-    suspend fun saveUser(user: UserSessionModel) {
+    suspend fun logout() {
+        dataStore.edit { preferences ->
+            preferences.clear()
+        }
+    }
+
+    suspend fun saveDataUser(user: UserModel) {
         dataStore.edit { preferences ->
             preferences[NAME_KEY] = user.name
             preferences[TOKEN_KEY] = user.token
             preferences[STATE_KEY] = user.isLogin
-        }
-    }
-
-    suspend fun login() {
-        dataStore.edit { preferences ->
-            preferences[STATE_KEY] = true
-        }
-    }
-
-    suspend fun logout() {
-        dataStore.edit { preferences ->
-            preferences.clear()
         }
     }
 
