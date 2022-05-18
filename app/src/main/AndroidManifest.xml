@@ -22,15 +22,15 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_new_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_new_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.IntermediateStoryApp">
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyBUTBdKUCa4CFfSg59yoE0MWC-sR8vIWIM" />
+            android:value="AIzaSyAJhVg4VbmE_Vyvl8MrJnLHAuqa-l00HFA" />
 
         <activity
             android:name=".view.MapsActivity"

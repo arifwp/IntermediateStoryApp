@@ -5,12 +5,12 @@
     <string name="btntofile">Open File</string>
     <string name="btnToSignIn">Already have an account</string>
     <string name="btnToSignUp">Don\'t have an acount</string>
-    <string name="your" translatable="false">Your</string>
-    <string name="story" translatable="false">Story</string>
-    <string name="share" translatable="false">Share</string>
+    <string name="your">Your</string>
+    <string name="story">Story</string>
+    <string name="share">Share</string>
     <string name="login_title">Log In</string>
-    <string name="emailText" translatable="false">Email</string>
-    <string name="hintemail" translatable="false">Email</string>
+    <string name="emailText">Email</string>
+    <string name="hintemail">Email</string>
     <string name="passwordText">Password</string>
     <string name="dummy_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</string>
     <string name="hintpassword">Password</string>
@@ -25,9 +25,9 @@
     <string name="dummy_name">Arif Wahyu Prasetyo</string>
     <string name="hintname">Name</string>
     <string name="upload_page">Upload Picture</string>
-    <string name="app_name" translatable="false">Your Story</string>
+    <string name="app_name">StoryApp</string>
     <string name="detail_page">Detail StoryApp</string>
     <string name="less_password">Password less than 6 character</string>
     <string name="empty_password">Password is empty</string>
-    <string name="title_activity_maps" translatable="false">MapsActivity</string>
+    <string name="title_activity_maps">MapsActivity</string>
 </resources>
